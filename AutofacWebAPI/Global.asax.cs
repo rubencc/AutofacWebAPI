@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json.Serialization;
-
-namespace AutofacWebAPI
+﻿namespace AutofacWebAPI
 {
     using System;
     using System.Collections.Generic;
@@ -11,6 +9,8 @@ namespace AutofacWebAPI
     using System.Web.Routing;
     using Autofac;
     using Autofac.Integration.WebApi;
+    using Newtonsoft.Json.Serialization;
+
 
     public class WebApiApplication : System.Web.HttpApplication
     {
@@ -30,6 +30,10 @@ namespace AutofacWebAPI
 
             // OPTIONAL: Register the Autofac filter provider.
             builder.RegisterWebApiFilterProvider(config);
+
+            IoCLoader.LoadAssemblies(builder);
+
+            
 
             // Set the dependency resolver to be Autofac.
             var container = builder.Build();
