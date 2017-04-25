@@ -61,6 +61,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -118,6 +122,14 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.Repository.Implementation\Domain.Repository.Implementation.csproj">
+      <Project>{928edc97-d357-44ae-9564-583813e27cfc}</Project>
+      <Name>Domain.Repository.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestructure.Commons\Infraestructure.Commons.csproj">
+      <Project>{3e3cd8ac-f9ed-439f-808a-f3d8dab73b58}</Project>
+      <Name>Infraestructure.Commons</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infraestructure.IoC.Implementation\Infraestructure.IoC.Implementation.csproj">
       <Project>{c4828593-caec-4bf8-8c25-3ce1e208c732}</Project>
       <Name>Infraestructure.IoC.Implementation</Name>
@@ -125,6 +137,10 @@
     <ProjectReference Include="..\Infraestructure.IoC.Interfaces\Infraestructure.IoC.Interfaces.csproj">
       <Project>{ba053183-e6b4-4d89-9b91-866111b0260b}</Project>
       <Name>Infraestructure.IoC.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestructure.Repository.Interfaces\Infraestructure.Repository.Interfaces.csproj">
+      <Project>{89c7b753-f188-4daf-bc97-5da682a73edc}</Project>
+      <Name>Infraestructure.Repository.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
