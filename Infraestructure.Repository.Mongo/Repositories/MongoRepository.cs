@@ -8,6 +8,7 @@
     using Infraestructure.Repository.Interfaces;
     using MongoDB.Driver;
     using Infraestructure.Commons;
+    using Domain.Commons;
 
     public abstract class MongoRepository<TEntity, TKey> : IRepository<TEntity, TKey>
         where TEntity : class, IEntity<TKey>

@@ -69,6 +69,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.Commons\Domain.Commons.csproj">
+      <Project>{5a8afefd-071c-49d7-8863-2620debd443a}</Project>
+      <Name>Domain.Commons</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infraestructure.Commons\Infraestructure.Commons.csproj">
       <Project>{3e3cd8ac-f9ed-439f-808a-f3d8dab73b58}</Project>
       <Name>Infraestructure.Commons</Name>

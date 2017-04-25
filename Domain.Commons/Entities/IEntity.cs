@@ -1,4 +1,4 @@
-﻿namespace Infraestructure.Commons
+﻿namespace Domain.Commons
 {
     using System;
    

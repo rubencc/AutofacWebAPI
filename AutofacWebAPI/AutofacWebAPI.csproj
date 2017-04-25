@@ -122,6 +122,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.Commons\Domain.Commons.csproj">
+      <Project>{5a8afefd-071c-49d7-8863-2620debd443a}</Project>
+      <Name>Domain.Commons</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain.Repository.Implementation\Domain.Repository.Implementation.csproj">
       <Project>{928edc97-d357-44ae-9564-583813e27cfc}</Project>
       <Name>Domain.Repository.Implementation</Name>

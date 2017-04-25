@@ -1,7 +1,7 @@
 ﻿namespace Domain.Repository.Implementation
 {
     using System;
-    using Infraestructure.Commons;
+    using Domain.Commons;
 
     public interface IDefaultEntity : IEntity<Guid>
     {

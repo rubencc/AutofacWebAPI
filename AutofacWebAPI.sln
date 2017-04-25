@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure.Commons", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Repository.Implementation", "Domain.Repository.Implementation\Domain.Repository.Implementation.csproj", "{928EDC97-D357-44AE-9564-583813E27CFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Commons", "Domain.Commons\Domain.Commons.csproj", "{5A8AFEFD-071C-49D7-8863-2620DEBD443A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{928EDC97-D357-44AE-9564-583813E27CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{928EDC97-D357-44AE-9564-583813E27CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{928EDC97-D357-44AE-9564-583813E27CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A8AFEFD-071C-49D7-8863-2620DEBD443A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8AFEFD-071C-49D7-8863-2620DEBD443A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8AFEFD-071C-49D7-8863-2620DEBD443A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8AFEFD-071C-49D7-8863-2620DEBD443A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
