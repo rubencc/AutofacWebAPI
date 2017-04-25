@@ -10,7 +10,8 @@
     {
         public void Configure(ContainerBuilder container)
         {
-            container.RegisterType<DefaultRepository>().As<IRepository<DefaultEntity, Guid>>();
+            container.RegisterType<DefaultEntity>().As<IDefaultEntity>();
+            container.RegisterType<DefaultRepository>().As<IRepository<IDefaultEntity, Guid>>();
         }
     }
 }

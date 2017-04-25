@@ -7,9 +7,10 @@
     using System.Threading.Tasks;
     using Infraestructure.Repository.Interfaces;
     using MongoDB.Driver;
+    using Infraestructure.Commons;
 
     public abstract class MongoRepository<TEntity, TKey> : IRepository<TEntity, TKey>
-        where TEntity : class
+        where TEntity : class, IEntity<TKey>
         where TKey : IComparable<TKey>, IComparable
     {
         private readonly IMongoContext context;
@@ -22,7 +23,11 @@
 
         public virtual async Task<TEntity> AddAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            await this.context.GetCollection<TEntity>()
+               .ReplaceOneAsync(Builders<TEntity>.Filter.Eq("_id", entity.Id), entity,
+                   new UpdateOptions { IsUpsert = true }).ConfigureAwaitFalse();
+
+            return entity;
         }
 
         public virtual async Task<TEntity> UpdateAsync(TEntity entity)

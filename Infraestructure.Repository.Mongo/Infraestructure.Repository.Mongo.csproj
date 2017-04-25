@@ -69,6 +69,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Infraestructure.Commons\Infraestructure.Commons.csproj">
+      <Project>{3e3cd8ac-f9ed-439f-808a-f3d8dab73b58}</Project>
+      <Name>Infraestructure.Commons</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infraestructure.IoC.Interfaces\Infraestructure.IoC.Interfaces.csproj">
       <Project>{ba053183-e6b4-4d89-9b91-866111b0260b}</Project>
       <Name>Infraestructure.IoC.Interfaces</Name>

@@ -14,9 +14,9 @@ namespace AutofacWebAPI.Controllers
     {
         private readonly ITest test;
         private readonly IFactory factory;
-        private readonly IRepository<DefaultEntity, Guid> repository;
+        private readonly IRepository<IDefaultEntity, Guid> repository;
 
-        public DateController(ITest test, IFactory factory, IRepository<DefaultEntity, Guid> repository)
+        public DateController(ITest test, IFactory factory, IRepository<IDefaultEntity, Guid> repository)
         {
             this.test = test;
             this.factory = factory;
@@ -26,10 +26,12 @@ namespace AutofacWebAPI.Controllers
         [HttpGet, Route("")]
         public async Task<IHttpActionResult> GetDate()
         {
-            
 
-            ITest test2 = this.factory.Resolve<ITest>();
-            await this.repository.GetAllAsync().ConfigureAwaitFalse();
+
+            IDefaultEntity entity = this.factory.Resolve<IDefaultEntity>();
+            entity.Name = "name";
+            entity.Id = Guid.NewGuid();
+            await this.repository.AddAsync(entity).ConfigureAwaitFalse();
             await Task.CompletedTask.ConfigureAwait(false);
             return Ok(DateTime.Now);
         }
