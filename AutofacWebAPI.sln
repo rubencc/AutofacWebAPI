@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacWebAPI", "AutofacWeb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure.IoC.Interfaces", "Infraestructure.IoC.Interfaces\Infraestructure.IoC.Interfaces.csproj", "{BA053183-E6B4-4D89-9B91-866111B0260B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure.IoC.Implementation", "Infraestructure.IoC.Implementation\Infraestructure.IoC.Implementation.csproj", "{C4828593-CAEC-4BF8-8C25-3CE1E208C732}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BA053183-E6B4-4D89-9B91-866111B0260B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA053183-E6B4-4D89-9B91-866111B0260B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA053183-E6B4-4D89-9B91-866111B0260B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4828593-CAEC-4BF8-8C25-3CE1E208C732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4828593-CAEC-4BF8-8C25-3CE1E208C732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4828593-CAEC-4BF8-8C25-3CE1E208C732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4828593-CAEC-4BF8-8C25-3CE1E208C732}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

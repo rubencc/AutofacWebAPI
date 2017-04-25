@@ -10,25 +10,28 @@
     {
         public static void LoadAssemblies(ContainerBuilder container)
         {
-            Assembly ptrAssembly = Assembly.GetExecutingAssembly();
-
-            foreach (Type item in ptrAssembly.GetTypes())
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
-                if (!item.IsClass)
-                    continue;
 
-                if (item.IsAbstract)
-                    continue;
 
-                if (item.GetInterfaces().Contains(typeof (IConfigIoC)))
+                foreach (Type item in assembly.GetTypes())
                 {
-                    Type[] argTypes = new Type[] { };
-                    ConstructorInfo cInfo = item.GetConstructor(argTypes);
-                    if (cInfo == null)
+                    if (!item.IsClass)
                         continue;
-                    
-                    var config = (IConfigIoC)cInfo.Invoke(new object[] {});
-                    config.Configure(container);
+
+                    if (item.IsAbstract)
+                        continue;
+
+                    if (item.GetInterfaces().Contains(typeof(IConfigIoC)))
+                    {
+                        Type[] argTypes = new Type[] { };
+                        ConstructorInfo cInfo = item.GetConstructor(argTypes);
+                        if (cInfo == null)
+                            continue;
+
+                        var config = (IConfigIoC)cInfo.Invoke(new object[] { });
+                        config.Configure(container);
+                    }
                 }
             }
         }

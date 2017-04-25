@@ -118,6 +118,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Infraestructure.IoC.Implementation\Infraestructure.IoC.Implementation.csproj">
+      <Project>{c4828593-caec-4bf8-8c25-3ce1e208c732}</Project>
+      <Name>Infraestructure.IoC.Implementation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infraestructure.IoC.Interfaces\Infraestructure.IoC.Interfaces.csproj">
       <Project>{ba053183-e6b4-4d89-9b91-866111b0260b}</Project>
       <Name>Infraestructure.IoC.Interfaces</Name>
